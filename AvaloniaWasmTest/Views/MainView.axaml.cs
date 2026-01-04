@@ -10,7 +10,7 @@ public partial class MainView : UserControl
         InitializeComponent();
         if (OperatingSystem.IsWindows() || OperatingSystem.IsLinux())
         {
-            Content = new Canvas3D()
+            Content = new Canvas3D();
         }
         else
         {
