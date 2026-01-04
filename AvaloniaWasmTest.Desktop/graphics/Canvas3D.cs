@@ -4,7 +4,7 @@ using AvaloniaWasmTest;
 
 public class Canvas3D : OpenGlControlBase
 {
-    I3DRenderer renderer;
+    I3DRenderer? renderer;
     protected override void OnOpenGlRender(GlInterface gl, int fb)
     {
         renderer ??= new OpenGlRenderer(gl);
