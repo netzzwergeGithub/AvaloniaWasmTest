@@ -18,6 +18,6 @@ class OpenGlRenderer(GlInterface gli) : I3DRenderer
 
     public void Render()
     {
-        throw new System.NotImplementedException();
+        
     }
 }
