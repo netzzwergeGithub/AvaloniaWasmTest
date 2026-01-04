@@ -2,7 +2,7 @@ using System;
 using Avalonia.OpenGL;
 using AvaloniaWasmTest;
 
-class OpenGlRenderer(GlInterface gli) : I3DRenderer
+public class OpenGlRenderer(GlInterface gli) : I3DRenderer
 {
     public void Clear(float r, float g, float b, float a)
     {
