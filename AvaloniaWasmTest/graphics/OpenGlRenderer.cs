@@ -4,7 +4,6 @@ using AvaloniaWasmTest;
 
 class OpenGlRenderer(GlInterface gli) : I3DRenderer
 {
-    GlInterface gli = gli;
     public void Clear(float r, float g, float b, float a)
     {
         Console.WriteLine("OpenGL Render called");
