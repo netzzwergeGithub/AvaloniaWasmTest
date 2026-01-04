@@ -1,4 +1,6 @@
 namespace AvaloniaWasmTest;
+
+using System;
 using Avalonia.OpenGL;
 using Avalonia.OpenGL.Controls;
 
@@ -11,6 +13,7 @@ public class OpenGlCanvas : OpenGlControlBase
 
     protected override void OnOpenGlRender(GlInterface gl, int fb)
     {
+        Console.WriteLine("OpenGL Render called");
         gl.ClearColor(0.2f, 0.3f, 0.8f, 1.0f);
         gl.Clear(GlConsts.GL_COLOR_BUFFER_BIT);
     }
