@@ -5,18 +5,11 @@ namespace AvaloniaWasmTest.Views;
 
 public partial class MainView : UserControl
 {
+    public Control? Canvas;
     public MainView()
     {
         InitializeComponent();
-        if (OperatingSystem.IsWindows() || OperatingSystem.IsLinux())
-        {
-            Content = new Canvas3D();
-        }
-        else
-        {
-            var os = Environment.OSVersion;
-
-            throw new NotImplementedException("Operating System not sopported" + os.Platform);
-        }
+        var canvas = CanvasFactory.CreateCanvas?.Invoke();
+        Content = canvas;
     }
 }
