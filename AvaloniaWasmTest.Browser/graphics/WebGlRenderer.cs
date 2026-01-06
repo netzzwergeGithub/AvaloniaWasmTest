@@ -7,7 +7,7 @@ public class WebGlRenderer (GlInterface gli): I3DRenderer
 {
     public void Clear(float r, float g, float b, float a)
     {
-        throw new System.NotImplementedException();
+        WebGLInterop.ClearColor(r, g, b, a);
     }
 
     public void Initialize()

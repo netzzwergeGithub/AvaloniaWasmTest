@@ -9,10 +9,11 @@ internal sealed partial class Program
 {
     private static async Task Main(string[] args)
     {
+        await JSHost.ImportAsync("webgl", "/webgl.js");
+        CanvasFactory.CreateCanvas = () => new Browser3D();
         await BuildAvaloniaApp()
             .WithInterFont()
             .StartBrowserAppAsync("out");
-        await JSHost.ImportAsync("webgl", "/webgl.js");
     }
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>();

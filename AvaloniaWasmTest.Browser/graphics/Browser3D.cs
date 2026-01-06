@@ -4,6 +4,10 @@ using AvaloniaWasmTest;
 
 public class Browser3D : OpenGlControlBase
 {
+    public Browser3D()
+    {
+        WebGLInterop.InitWebGL("webglCanvas");
+    }
     I3DRenderer? renderer;
     protected override void OnOpenGlRender(GlInterface gl, int fb)
     {
