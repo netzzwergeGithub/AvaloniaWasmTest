@@ -12,7 +12,7 @@ internal sealed partial class Program
         await BuildAvaloniaApp()
             .WithInterFont()
             .StartBrowserAppAsync("out");
-        await JSHost.ImportAsync("webgl", "./webgl.js");
+        await JSHost.ImportAsync("webgl", "/webgl.js");
     }
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>();
